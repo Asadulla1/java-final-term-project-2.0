@@ -1,0 +1,291 @@
+package Classes;
+import java.util.*;
+public class Registration2{
+	Scanner sc =new Scanner(System.in);
+	Scanner input =new Scanner(System.in);
+	String setRegistration[] = new String[200];
+	private String cseCoursesForSlot1[] = new String[]{"Object oriented Analysis and Design",
+	"Software Quality and Testing",
+	"Advance Computer Network",
+	"Network Security",
+	"Data warehouse and Data Mining",
+	"Advance Database Management",
+	};
+	private String cseCoursesForSlot2[] = new String[]{"optoelectronic Devices",
+	"Cellular Mobile Comminucation",
+	"Microwave Engineering",
+	"Robotics Engineering",
+	"Software Engineering",
+	"Introduction to Animation"
+	};
+	private String cseCoursesForSlot3[] = new String[]{"Data Comminucation",
+	"Biomechanics Devices",
+	"Computer Graphics",
+	"Principles of Economics",
+	"Digital Signal Processing"
+	};
+	private String cseCoursesForSlot4[] = new String[]{"Introduction to Engineering Studies",
+	"Physics",
+	"Chemistry",
+	"Basic Mechanical Engineering",
+	"Algorithm",
+	"Data Structure"	
+	};
+	//EEE Section
+	private String eeeCoursesForSlot1[]=new String[]{
+		"Electrical Properties",
+		"Power System Analysis",
+		"Principle of Comminucation",
+		"Analog Electronics"
+	};
+	private String eeeCoursesForSlot2[] = new String[]{
+	"Electric Circuit",
+	"Electric Devices",
+	"Electric Mechanics",
+	"Engineering Shop"
+	};
+	private String eeeCoursesForSlot3[] = new String[]{
+	"Basic Mechanical Engineering",
+	"English Writting Skills",
+	"Bangladesh Studies",
+	"Principle of Accounting"
+	};
+	private String eeeCoursesForSlot4[] = new String[]{
+	"Introduction to Enginnering",
+	"Integral Calculus",
+	"Physics",
+	"Chemistry"
+	};
+	//Cse slot 1 show
+	public void showCseCoursesForSlot1(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<cseCoursesForSlot1.length;i++){
+            System.out.println((i+1)+". "+cseCoursesForSlot1[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showCseCoursesForSlot2(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<cseCoursesForSlot2.length;i++){
+            System.out.println((i+1)+". "+cseCoursesForSlot2[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showCseCoursesForSlot3(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<cseCoursesForSlot3.length;i++){
+            System.out.println((i+1)+". "+cseCoursesForSlot3[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showCseCoursesForSlot4(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<cseCoursesForSlot4.length;i++){
+            System.out.println((i+1)+". "+cseCoursesForSlot4[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	//EEE Slot
+	public void showEeeCoursesForSlot1(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<eeeCoursesForSlot1.length;i++){
+            System.out.println((i+1)+". "+eeeCoursesForSlot1[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showEeeCoursesForSlot2(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<eeeCoursesForSlot2.length;i++){
+            System.out.println((i+1)+". "+eeeCoursesForSlot2[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showEeeCoursesForSlot3(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<eeeCoursesForSlot3.length;i++){
+            System.out.println((i+1)+". "+eeeCoursesForSlot3[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	public void showEeeCoursesForSlot4(){
+		System.out.println("*************Available Courses***************");
+		for(int i=0;i<eeeCoursesForSlot4.length;i++){
+            System.out.println((i+1)+". "+eeeCoursesForSlot4[i]);
+        }
+		System.out.println("**********End Of Available Courses***********");
+	}
+	
+	//Set Registration for CSE slot-1
+	public void setCseCoursesForSlot1(){
+        System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+		for(int i=0;i<3;i++){
+			int inputNumber = sc.nextInt();
+			if(inputNumber == 1){
+				setRegistration[i] = cseCoursesForSlot1[0];
+			}
+			if(inputNumber == 2){
+				setRegistration[i] = cseCoursesForSlot1[1];
+			}
+			if(inputNumber == 3){
+				setRegistration[i] = cseCoursesForSlot1[2];
+			}
+			if(inputNumber == 4){
+				setRegistration[i] = cseCoursesForSlot1[3];
+			}
+			if(inputNumber == 5){
+				setRegistration[i] = cseCoursesForSlot1[4];
+			}
+			if(inputNumber == 6){
+				setRegistration[i] = cseCoursesForSlot1[5];
+			}
+		}
+		
+	}
+	//Set Registration for CSE slot-2
+	public void setCseCoursesForSlot2(){
+		System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+		for(int i=0;i<3;i++){
+			int inputNumber = sc.nextInt();
+			if(inputNumber == 1){
+				setRegistration[i] = cseCoursesForSlot2[0];
+			}
+			if(inputNumber == 2){
+				setRegistration[i] = cseCoursesForSlot2[1];
+			}
+			if(inputNumber == 3){
+				setRegistration[i] = cseCoursesForSlot2[2];
+			}
+			if(inputNumber == 4){
+				setRegistration[i] = cseCoursesForSlot2[3];
+			}
+			if(inputNumber == 5){
+				setRegistration[i] = cseCoursesForSlot2[4];
+			}if(inputNumber == 6){
+				setRegistration[i] = cseCoursesForSlot2[5];
+			}
+		}
+	}
+	//Set Registration CseCoursesForSlot3
+		public void setCseCoursesForSlot3(){
+			System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+			for(int i=0;i<3;i++){
+			int inputNumber = sc.nextInt();
+				if(inputNumber == 1){
+					setRegistration[i] = cseCoursesForSlot3[0];
+				}
+				if(inputNumber == 2){
+					setRegistration[i] = cseCoursesForSlot3[1];
+				}
+				if(inputNumber == 3){
+					setRegistration[i] = cseCoursesForSlot3[2];
+				}
+				if(inputNumber == 4){
+					setRegistration[i] = cseCoursesForSlot3[3];
+				}
+				if(inputNumber == 5){
+					setRegistration[i] = cseCoursesForSlot3[4];
+				}
+			}
+		} 
+		//Set Registration for CSE slot-4
+		public void setCseCoursesForSlot4(){
+			System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+			for(int i=0;i<3;i++){
+			int inputNumber = sc.nextInt();
+				if(inputNumber == 1){
+				setRegistration[i] = cseCoursesForSlot4[0];
+				}
+				if(inputNumber == 2){
+					setRegistration[i] = cseCoursesForSlot4[1];
+				}
+				if(inputNumber == 3){
+					setRegistration[i] = cseCoursesForSlot4[2];
+				}
+				if(inputNumber == 4){
+					setRegistration[i] = cseCoursesForSlot4[3];
+				}
+				if(inputNumber == 5){
+					setRegistration[i] = cseCoursesForSlot4[4];
+				}
+				if(inputNumber == 6){
+					setRegistration[i] = cseCoursesForSlot4[5];
+				}
+				}
+				
+		}
+		//Set Registration for EEE slot-1
+		public void setEeeCoursesForSlot1(){
+				System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+			for(int i=0;i<3;i++){
+				int inputNumber = sc.nextInt();
+				if(inputNumber==1){
+					setRegistration[i] = eeeCoursesForSlot1[0];
+				}
+				if(inputNumber==2){
+					setRegistration[i] = eeeCoursesForSlot1[1];
+				}if(inputNumber==3){
+					setRegistration[i] = eeeCoursesForSlot1[2];
+				}if(inputNumber==4){
+					setRegistration[i] = eeeCoursesForSlot1[3];
+				}
+			}
+		}
+		//Set Registration for EEE slot-2
+		public void setEeeCoursesForSlot2(){
+			System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+			for(int i=0;i<3;i++){
+			int inputNumber = sc.nextInt();
+				if(inputNumber == 1){
+				setRegistration[i] = eeeCoursesForSlot2[0];
+			}
+				if(inputNumber == 2){
+				setRegistration[i] = eeeCoursesForSlot2[1];
+			}
+				if(inputNumber == 3){
+				setRegistration[i] = eeeCoursesForSlot2[2];
+			}
+				if(inputNumber == 4){
+				setRegistration[i] = eeeCoursesForSlot2[3];
+			}
+			}
+		}
+		//Set Registration for EEE slot-3
+			public void setEeeCoursesForSlot3(){
+				System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+				for(int i=0;i<3;i++){
+				int inputNumber = sc.nextInt();
+					if(inputNumber==1){
+					setRegistration[i] = eeeCoursesForSlot3[0];
+					}
+					if(inputNumber==2){
+					setRegistration[i] = eeeCoursesForSlot3[1];
+					}
+					if(inputNumber==3){
+					setRegistration[i] = eeeCoursesForSlot3[2];
+					}
+					if(inputNumber==4){
+					setRegistration[i] = eeeCoursesForSlot3[3];
+					}
+				}
+			}
+			//Set Registration for EEE slot-4
+			public void setEeeCoursesForSlot4(){
+				System.out.println("You Can Take 3 Courses at a Time. Enter Your Preferred Courses Number: ");
+				for(int i=0;i<3;i++){
+				int inputNumber = sc.nextInt();
+					if(inputNumber==1){
+					setRegistration[i] = eeeCoursesForSlot4[0];
+					}
+					if(inputNumber==2){
+					setRegistration[i] = eeeCoursesForSlot4[1];
+					}
+					if(inputNumber==3){
+					setRegistration[i] = eeeCoursesForSlot4[2];
+					}
+					if(inputNumber==4){
+					setRegistration[i] = eeeCoursesForSlot4[3];
+					}
+				}
+			}
+		
+}

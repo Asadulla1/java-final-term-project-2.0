@@ -1,0 +1,49 @@
+package Classes;
+import java.util.*;
+public class OnlinePayment {
+	double onlinePayAbleAmount = 5500*3;
+    double newPayAbleAmount;
+    double discount;
+    double extraChargePayment;
+    Scanner sc = new Scanner(System.in);
+   
+    public void setPayableAmount(){
+        System.out.println("Enter Your Cgpa:");
+        double cgpa = sc.nextDouble();
+        if(cgpa == 4.00 ){
+            System.out.println("Congratulations! You're Under Complete Scholarship");
+            System.out.print("Your total Payable Amount With 1.5% Extra Charges:");
+            discount = onlinePayAbleAmount * 1;
+            onlinePayAbleAmount = (onlinePayAbleAmount - discount);
+            extraChargePayment = onlinePayAbleAmount*0.015;
+            newPayAbleAmount = onlinePayAbleAmount +extraChargePayment;
+            System.out.println(newPayAbleAmount);
+        }
+        else if(cgpa<4.00 && cgpa >= 3.75){
+            System.out.println("Congratulations! You will get 50% Scholarship");
+            System.out.print("Your total Payable Amount With 1.5% Extra Charges:");
+            discount = onlinePayAbleAmount * 0.5;
+            onlinePayAbleAmount = (onlinePayAbleAmount - discount);
+            extraChargePayment = onlinePayAbleAmount*0.015;
+            newPayAbleAmount = onlinePayAbleAmount +extraChargePayment;
+            System.out.println(newPayAbleAmount);
+
+        }
+        else if(cgpa<3.75 && cgpa >= 3.50){
+            System.out.println("Congratulations! You will get 30% Scholarship");
+            System.out.print("Your total Payable Amount With 1.5% Extra Charges:");
+            discount = onlinePayAbleAmount * 0.3;
+            onlinePayAbleAmount = (onlinePayAbleAmount - discount);
+            extraChargePayment = onlinePayAbleAmount*0.015;
+            newPayAbleAmount = onlinePayAbleAmount +extraChargePayment;
+            System.out.println(newPayAbleAmount);
+        }
+        else{
+            System.out.println("Sorry! You're not accepted for Scholarship.");
+			System.out.print("Your total Payable Amount With 1.5% Extra Charges:");
+            extraChargePayment = onlinePayAbleAmount*0.015;
+            newPayAbleAmount = onlinePayAbleAmount +extraChargePayment;
+            System.out.println(newPayAbleAmount);
+        }
+    }
+}

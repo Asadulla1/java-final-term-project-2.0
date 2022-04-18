@@ -1,0 +1,68 @@
+package Classes;
+import Interfaces.*;
+public class StudentPortal implements StudentsOperation{
+	private Student students[] = new Student[200];
+	//public String loginCart[] = new loginCart[200];
+	public void insertStudent(Student s){
+		boolean flag = false;
+		for(int i=0;i<students.length;i++){
+			if(students[i]==null){
+				students[i] = s;
+				flag = true;
+				break;
+			}
+		}
+		if(flag){
+			System.out.println("Student Inserted");
+		}else{
+			System.out.println("Student Insertation Failed");
+		}
+	}
+		public void removeStudent(Student s){
+			boolean flag = false;
+		for(int i=0;i<students.length;i++){
+			if(students[i]== s){
+				students[i] = null;
+				flag = true;
+				break;
+			}
+		}
+		if(flag){
+			System.out.println("Student Removed");
+		}else{
+			System.out.println("Process Failed");
+		}
+	}
+	public void ShowAllStudents(){
+		boolean existence = true;
+		for(Student s: students){
+			if(s !=null){
+				System.out.println("************Student Information*************");
+				System.out.println("Student Name: "+ s.getName());
+				System.out.println("Student Id: "+ s.getId());
+				System.out.println("Student Session: "+ s.getSession());
+				System.out.println("Student Program: "+ s.getProgram());
+				System.out.println("************End of Student Information**********");
+			}
+			else{
+				existence = false;
+			}
+		}
+		if(!existence){
+			System.out.println("No one has been registered yet");
+		}
+	}
+	public Student getStudent(String name){
+		Student s = null;
+		for(int i = 0;i<students.length;i++){
+			if(students[i] != null){
+				if(students[i].getName().equals(name)){
+					s = students[i];
+					break;
+				}
+			}
+		}
+		return s;
+	}
+	//PreRegistration p =new PreRegistration(); 
+}
